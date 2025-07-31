@@ -20,16 +20,74 @@
     The developer of this program expressly disclaims all liability for any damages or losses arising from the use or misuse of the information provided. 
     </h4>
   </div>
-  <div class="container">
-    <div id="top-row">
+  <div class="container"> <!-- main body container -->
 
-      <label for="search-bar">Search location</label>
-        <input type="search" id="search-bar" placeholder="Search for a location">
-      </div>
+    <div id="top-row"> <!-- start of top row bar for location search-->
 
-    </div>
+      <div id="topPart-row">
+        <div id="search-div">
+          <input type="search" id="search-bar" placeholder="Search for a location">
+        </div>
+        
+        <div id="map-div" >
+          <img src="images/globe.png" alt="globe icon" id="globe-icon">
+          <span id="map-text">Or click here for a map</span>
+        </div>
+      </div> <!--end of the top row, row 1-->
 
-  </div>
+    </div> <!-- end of top row bar-->
+
+    <div id="weather-div"> <!-- start of the entire weather section-->
+      <div id="current-location-div"> <!-- contains location name and icon of current weather conditions-->
+        <span id="forecast-text">24 Hour Weather Forecast - </span>
+        <span id="location-name">New Orleans, Louisiana </span>
+
+      </div> <!--end of location div-->
+      <hr width="100%" size="3" color="black">
+
+      <div id="weather-forecast-div"> <!-- div for all weather information-->
+        <!--Default is 24 hour forecast-->
+        <!-- need to define this section as a flex box that grows row
+         direction, so each div should grow column way with info-->
+         <!-- We cant have 24 slots so we need to instead make a grid
+          where the hours grow down (column) direction and the info grows
+          row direction. A left and right direction click above the table to 
+          change the day -->
+
+        <div id="row1-weather"> <!-- row for day change buttons-->
+            <div id="prev-day" class="day-change">
+              <span>Yesterday</span>
+            </div>
+
+            <div id="next-day" class="day-change">
+              <span>Tomorrow</span>
+            </div>
+        </div> <!--end of row for day change-->
+
+        <div id="weather-display-div"> <!--table for weather forecast-->
+          <div class="weather-display-row">
+            <span class="time">12:00 AM</span>
+            <span class="temp">75°F</span>
+            <span class="condition">Clear</span>
+            <img src="images/sun.png" alt="sun icon" class="weather-icon">
+          </div>
+
+          <div class="weather-display-row">
+            <span class="time">1:00 AM</span>
+            <span class="temp">74°F</span>
+            <span class="condition">Clear</span>
+            <img src="images/sun.png" alt="sun icon" class="weather-icon">
+          </div>
+
+          <!-- Additional rows can be added here for more hours -->
+
+        </div> <!-- end of weather forecast actual info (weather-display-div)-->
+
+      </div> <!-- end of weather forecast section (weather-forecast-div)-->
+
+    </div> <!-- end of weather section (weather-div)-->
+
+  </div> <!-- end of the main body container div-->
 
     <script type="module" src="main.js?v=2"></script>
 </body>

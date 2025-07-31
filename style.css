@@ -6,7 +6,7 @@ body {
   font-size: 15px;
   color: black;
   font-family: 'Georgia', serif;
-  background-color: #8cd2e9;
+  background-color: #cac8c8;
 }
 
 .title{
@@ -14,16 +14,193 @@ body {
   flex-direction: column; /* defines the main axis */
   justify-content: center; /* justify-content aligns items along the main axis */
   align-items: center; /* align-items aligns items along the axis perpendicular to the main axis */
-  background:#e2e0e0;
+  background-color:#cac8c8;
   border-radius:8px;
   text-align: center;
 }
 
 #top-row{
   display:flex;
-  flex-direction:row;
-  justify-content: flex-start;
-  align-items:center;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
   background-color: rgb(25, 70, 167);
   min-height: 100px;
+}
+
+#topPart-row{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  display: flex;
+  flex-direction:row;
+  justify-content: center;
+  align-items: center;
+}
+
+#search-div{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#search-bar{
+  height: 30px;
+  width: 25ch;
+  border-radius: 10px;
+  background-color: aliceblue;
+  font-size:18px;
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+
+#search-bar::placeholder{
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Georgia', serif;
+  color: #888;
+  background-color: aliceblue;
+}
+
+#map-div{
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 50px;
+  background-color: aliceblue;
+  border-radius: 10px;
+  height: 30px;
+  min-width: 30ch; /*can change this to adjust if needed, right now won't shrink below 30 characters*/
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+#map-div:hover{
+  transform: scale(1.05);
+  background-color: deepskyblue;
+}
+
+#globe-icon{
+  width: 28px;
+  height:28px;
+  margin-right: 1px;
+  margin-left: 3px;
+}
+
+#map-text{
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 7px;
+  margin-left: 7px;
+}
+
+.forecast-length{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: aliceblue;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.forecast-length:hover{
+  transform: scale(1.05);
+  background-color: deepskyblue;
+}
+
+
+#weather-div{
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: rgb(156, 209, 255);
+  margin-bottom: 35px;
+  padding-bottom: 25px;
+}
+
+
+#current-location-div{
+  display:flex;
+  flex-direction:row;
+  justify-content: center;
+  align-items: center;
+  margin-left: 25px;
+  border-radius: 10px;
+  margin-top: 35px;
+  margin-bottom: 20px;
+}
+
+#forecast-text{
+  font-size: 22px;
+  font-weight: bold;
+  margin-right: 7px;
+  margin-left: 7px;
+  border-radius: 10px;
+}
+
+#location-name{
+  font-size: 32px;
+  font-weight: bold;
+  margin-right: 7px;
+}
+
+
+#location-pin{
+  width:30px;
+  height:30px;
+}
+
+#weather-forecast-div{
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  
+}
+
+#row1-weather{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.day-change{
+  margin: 0 10px;
+  padding: 5px 10px;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.day-change:hover{
+  transform: scale(1.05);
+  background-color: rgb(67, 75, 78);
+}
+
+#prev-day{
+  margin-left: 50px;
+}
+
+#next-day{
+  margin-right: 50px;
+}
+
+.weather-icon{
+  width: 35px;
+  height: 35px;
 }
