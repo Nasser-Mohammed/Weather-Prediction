@@ -8,14 +8,30 @@
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
+
 <body>
-  <a href="../../index.html" class="back-button">← Back</a>
-  <div class="wrapper">
+  <div class="title">
     <h1>Weather Forecast</h1>
-    <h3>All predictions are made using my own techniques and are not 
-    guaranteed to be accurate</h3>
-    <h4>Solutions approximated with Runge-Kutta method</h4>
+    <h2 style="font-weight: bold; margin-bottom:0">Disclaimer</h2>
+    <h4 style="font-weight: bold; margin-top:5px">
+    The weather forecasts and related information provided by this program are for informational purposes only.
+    While efforts are made to ensure accuracy, no guarantees are made regarding the completeness, reliability, or suitability of the information.
+    Users should exercise their own judgment and not rely solely on these forecasts for making any decisions, including safety-related or financial decisions.
+    The developer of this program expressly disclaims all liability for any damages or losses arising from the use or misuse of the information provided. 
+    </h4>
+  </div>
+  <div class="container">
+    <div id="top-row">
+
+      <label for="search-bar">Search location</label>
+        <input type="search" id="search-bar" placeholder="Search for a location">
+      </div>
+
+    </div>
+
+  </div>
 
     <script type="module" src="main.js?v=2"></script>
 </body>
+
 </html>
